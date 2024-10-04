@@ -1,0 +1,13 @@
+<app-card>
+    <!-- Adding a "click" event listener to our button -->
+    <button [class.active]="selected" (click)="onSelectUser()" >
+        <!-- This is called property binding in Angular, where you wrap the DOM element
+        in brackets and then set the value. By doing this you can use the values you
+        define in your component.ts file -->
+        <img 
+            [src]="imagePath" 
+            [alt]="user.name"
+        />
+        <span>{{ user.name }}</span>
+    </button>
+</app-card>
